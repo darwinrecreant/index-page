@@ -5,8 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+  </script>
 </head>
 <body>
-  
+  <script>
+    var urlParams = new URLSearchParams(window.location.search);
+    var id = urlParams.get("id");
+    var script = document.createElement('script');
+    script.src = "https://www.googletagmanager.com/gtag/js?id=" + id;
+    gtag('js', new Date());
+    gtag('config', id);
+    document.head.appendChild(script);
+  </script>
 </body>
 </html>
